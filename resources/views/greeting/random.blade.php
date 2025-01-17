@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>greeting01</title>
+    <title>random</title>
 </head>
 <body>
-    <h1>{{ $time }}のあいさつ</h1>
-    <h2>{{ $result }}</h2>
+    <h1>ランダムなメッセージ</h1>
+    <h2>{{ $greetings }}</h2>
 </body>
 </html>

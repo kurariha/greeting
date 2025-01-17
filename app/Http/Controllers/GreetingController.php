@@ -6,16 +6,16 @@ use Illuminate\Http\Request;
 
 class GreetingController extends Controller
 {
-    public function greeting03()
+    public function random()
     {
         $greetings = ['おはよう', 'こんにちは', 'こんばんは', 'おやすみ'];
         shuffle($greetings);
-        return view('greeting.greeting03',[
+        return view('greeting.random',[
             'greetings' => $greetings[0],
             ]);
     }
     
-    public function greeting01($greeting)
+    public function greeting($greeting)
     {
         if ($greeting === 'morning') {
             $time = '朝';
@@ -31,7 +31,7 @@ class GreetingController extends Controller
             $result = 'おやすみ';
         }
         return view(
-            'greeting.greeting01',
+            'greeting.greeting',
             [
             'result' => $result,
             'time' => $time
@@ -39,9 +39,9 @@ class GreetingController extends Controller
         );
     }
 
-    public function greeting02($freeword)
+    public function freeword($freeword)
     {
-        return view('greeting.greeting02', ['freeword' => $freeword]);
+        return view('greeting.freeword', ['freeword' => $freeword]);
     }
 
 
